@@ -1,53 +1,75 @@
 "use client";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, DropdownItem, Button,
-    DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
+import Link from "next/link";
+import { Button } from "@nextui-org/react";
 import Logo from "./Logo";
+import LoginIcon from '@mui/icons-material/Login';
 
 const navLinks = [
     {
+        title: "Home",
+        path: "/",
+    },
+    {
         title: "Events",
         path: "/events",
+    },
+    {
+        title: "Newsletters",
+        path: "/newsletter"
     },
     {
         title: "Stories",
         path: "stories"
     },
     {
-        title: "About Us",
+        title: "About ACE",
         path: "/about"
     },
     {
-        title: "",
-        path: "/"
+        title: "Team",
+        path: "/team"
     }
 ]
 
-const optNavLink = [
-    {
-        title: "Login",
-        path: "/login"
-    },
-    {
-        title: "Sign Up",
-        path: "/register"
-    },
-];
+type AppbarProp = {
+    activeLink: string
+}
 
-export default function Appbar(){
+export default function Appbar({ activeLink }: AppbarProp){
     return(
-        <Navbar>
-            <NavbarBrand className="w-4/5">
-                <Logo />
-            </NavbarBrand>
-            <NavbarContent>
-
-            </NavbarContent>
-            <NavbarContent
-                justify="end"
-            >
-                <NavbarItem>
-                </NavbarItem>
-            </NavbarContent>
-        </Navbar>
+        <div className="flex justify-center items-center w-3/4 shadow-lg p-4 rounded-md">
+            <div className="flex-grow-0">
+                <Link href="/">
+                    <Logo />
+                </Link>
+            </div>
+            <div className="flex justify-center flex-grow gap-x-4">
+                {navLinks.map((link, index) => (
+                    <Link 
+                        href={link.path} 
+                        key={index}
+                    >
+                        <Button
+                            className={`my-2 rounded-md border-2 bg-white 
+                            text-[#230C25] font-semibold text-md 
+                            hover:border-[#230C25] 
+                            ${activeLink === link.title ? "border-[#230C25]" : "border-transparent"}`}
+                        >
+                            {link.title}
+                        </Button>
+                    </Link>
+                ))}
+            </div>
+            <div className="flex flex-grow-0 gap-x-6">
+                <Link href="/login">
+                    <Button
+                        className="my-2 rounded-md bg-[#230C25] text-white"
+                        endContent={<LoginIcon />}
+                    >
+                        Sign In
+                    </Button>
+                </Link>
+            </div>
+        </div>
     );
 }
