@@ -50,7 +50,9 @@ export default function Home() {
             boldContent={"Thank you for your patience!"}
             display={true}
         />
-        <Appbar />
+            <div className="w-full flex justify-center py-2">
+                <Appbar activeLink={"Home"} />
+            </div>
         <div className="text-center py-20">
             <FAQSection items={faqs}/>
         </div>
