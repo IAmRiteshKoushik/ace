@@ -2,13 +2,14 @@ import {Button} from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import CallMadeOutlinedIcon from '@mui/icons-material/CallMadeOutlined';
 import MarkEmailReadOutlinedIcon from '@mui/icons-material/MarkEmailReadOutlined';
+import Logo from "./Logo";
 
 export default function Footer(){
     return(
         <div className="bg-gradient-to-r from-violet-200 to-pink-200 ">
             {/* Grid Layout */}
             <div className="flex justify-center w-screen">
-                <div className="w-2/3 my-6 grid grid-cols-4 gap-4">
+                <div className="w-2/3 my-6 grid grid-cols-4 grid-rows-2 gap-4">
                     <div className="col-span-1">
                         <div 
                             className="text-3xl font-semibold text-[#2E0C25]"
@@ -29,7 +30,7 @@ export default function Footer(){
                         <div>Timeline</div>
                         <div>Contact Us</div>
                     </div>
-                    <div className="col-span-1">
+                    <div className="col-span-1 row-span-2">
                         <div className="text-3xl font-semibold text-[#2E0C25]">Newsletter</div>
                         <div className="my-2 text-[#2E0C25]">
                             Never miss an opportunity! Subscribe to our 
@@ -48,6 +49,9 @@ export default function Footer(){
                         >
                             Subscribe Now
                         </Button>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <Logo />
                     </div>
                 </div>
             </div>
