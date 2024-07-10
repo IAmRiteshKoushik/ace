@@ -6,7 +6,7 @@ import Logo from "./Logo";
 
 export default function Footer(){
     return(
-        <div className="bg-gradient-to-r from-violet-200 to-pink-200 ">
+        <div className="bg-gradient-to-r from-violet-200 to-pink-200">
             {/* Grid Layout */}
             <div className="flex justify-center w-screen">
                 <div className="w-2/3 my-6 grid grid-cols-4 grid-rows-2 gap-4">

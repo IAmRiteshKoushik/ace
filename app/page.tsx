@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import FAQSection from "@/components/Faq";
 import Footer from "@/components/Footer";
+import Appbar from "@/components/Appbar";
 
 const faqs = [
     { 
@@ -43,12 +44,13 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-100dvw overflow-clip">
         <Banner 
             content={"Amrita Centre for Entrepreneurship is under construction."}
             boldContent={"Thank you for your patience!"}
             display={true}
         />
+        <Appbar />
         <div className="text-center py-20">
             <FAQSection items={faqs}/>
         </div>
