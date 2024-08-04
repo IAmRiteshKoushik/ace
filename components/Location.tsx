@@ -18,7 +18,7 @@ export default function Location(){
                     10.9038° N, 76.8984° E
                 </div>
             </div>
-            <div className="ml-auto h-full flex items-center">
+            <div className="ml-auto flex items-center">
                 <Button
                     radius="full"
                     className="my-2 border-2 bg-white text-[#230C25] 

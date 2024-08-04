@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import Appbar from "@/components/Appbar";
 import HeroSection from "@/components/Hero";
 import Location from "@/components/Location";
+import Overview from "@/components/Overview";
+import Gallery from "@/components/Gallery";
 
 const faqs = [
     { 
@@ -50,18 +52,38 @@ export default function Home() {
             <div
                 className="fixed inset-0 -z-10 h-full w-full bg-white \
                 bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_2px,transparent_1px)] \
-                bg-[size:80px_80px]"
+                bg-[size:70px_70px]"
             >
             </div>
             <div className="sticky top-3 w-full flex justify-center py-2 mt-2">
                 <Appbar activeLink={"Home"} />
             </div>
-            <div className="w-full flex justify-center py-5">
+            {/* Hero Section */}
+            <div className="w-full h-dvh flex flex-col justify-center items-center py-5">
                 <HeroSection />
-            </div>
-            <div className="w-full flex justify-center py-5">
                 <Location />
             </div>
+            {/* Overview */}
+            <div className="w-full h-dvh flex justify-center py-5">
+                <Overview />
+            </div>
+            {/* Upcoming Events */}
+            <div className="w-full h-dvh flex justify-center py-5">
+                <Overview />
+            </div>
+            {/* Statistics */}
+            <div className="w-full h-dvh flex justify-center py-5">
+                <Overview />
+            </div>
+            {/* Sponsors */}
+            <div className="w-full h-dvh flex justify-center py-5">
+                <Overview />
+            </div>
+            {/* Gallery */}
+            <div className="w-full h-dvh flex justify-center py-5">
+                <Gallery />
+            </div>
+            {/* FAQ Section */}
             <div className="text-center py-20">
                 <FAQSection items={faqs}/>
             </div>
