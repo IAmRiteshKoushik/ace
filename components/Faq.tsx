@@ -16,7 +16,7 @@ type FAQProps = {
 export default function FAQSection({ items }: FAQProps){
     return(
         <div className="w-full flex justify-center">
-            <div className="w-3/5">
+            <div className="w-3/5 px-2 border-2 border-[#230C25] shadow-2xl rounded-lg py-5 bg-white">
                 <Accordion      
                     motionProps={{
                         variants: {
@@ -55,7 +55,7 @@ export default function FAQSection({ items }: FAQProps){
                         },
                     }}
                     variant="light"
-                    className="flex flex-col gap-0"
+                    className="flex flex-col bg-white"
                 >
                     {items.map((item, index) => (
                         <AccordionItem 
@@ -64,7 +64,7 @@ export default function FAQSection({ items }: FAQProps){
                             title={<div className="text-center flex items-center">
                                 <Chip variant="bordered" 
                                     size="sm"
-                                    className="border-1 text-[#2E0C25] 
+                                    className="border-2 text-[#2E0C25] 
                                     border-[#2E0C25] text-sm mx-2"
                                 >
                                     {"0" + (index + 1)}

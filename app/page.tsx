@@ -1,7 +1,9 @@
-import Banner from "@/components/Banner";
+// import Banner from "@/components/Banner";
 import FAQSection from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Appbar from "@/components/Appbar";
+import HeroSection from "@/components/Hero";
+import Location from "@/components/Location";
 
 const faqs = [
     { 
@@ -44,19 +46,26 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div className="w-100dvw overflow-clip">
-        <Banner 
-            content={"Amrita Centre for Entrepreneurship is under construction."}
-            boldContent={"Thank you for your patience!"}
-            display={true}
-        />
-            <div className="w-full flex justify-center py-2">
+        <div className="w-100dvw overflow-clip">
+            <div
+                className="fixed inset-0 -z-10 h-full w-full bg-white \
+                bg-[linear-gradient(to_right,#f0f0f0_2px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_2px,transparent_1px)] \
+                bg-[size:80px_80px]"
+            >
+            </div>
+            <div className="sticky top-3 w-full flex justify-center py-2 mt-2">
                 <Appbar activeLink={"Home"} />
             </div>
-        <div className="text-center py-20">
-            <FAQSection items={faqs}/>
+            <div className="w-full flex justify-center py-5">
+                <HeroSection />
+            </div>
+            <div className="w-full flex justify-center py-5">
+                <Location />
+            </div>
+            <div className="text-center py-20">
+                <FAQSection items={faqs}/>
+            </div>
+            <Footer />
         </div>
-        <Footer />
-    </div>
   );
 }

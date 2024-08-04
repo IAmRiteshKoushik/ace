@@ -37,7 +37,8 @@ type AppbarProp = {
 
 export default function Appbar({ activeLink }: AppbarProp){
     return(
-        <div className="flex justify-center items-center w-3/4 shadow-lg p-4 rounded-md">
+        <div className="flex justify-center items-center w-3/4 shadow-2xl p-4 
+            rounded-md bg-white border-1 border-[#230C25]">
             <div className="flex-grow-0">
                 <Link href="/">
                     <Logo />
