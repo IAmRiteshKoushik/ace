@@ -1,4 +1,3 @@
-// import Banner from "@/components/Banner";
 import FAQSection from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Appbar from "@/components/Appbar";
@@ -6,6 +5,8 @@ import HeroSection from "@/components/Hero";
 import Location from "@/components/Location";
 import Overview from "@/components/Overview";
 import Gallery from "@/components/Gallery";
+import Sponsors from "@/components/Sponsors";
+import Stats from "@/components/Stats";
 
 const faqs = [
     { 
@@ -55,7 +56,8 @@ export default function Home() {
                 bg-[size:70px_70px]"
             >
             </div>
-            <div className="sticky top-3 w-full flex justify-center py-2 mt-2">
+            <div className="sticky top-3 w-full flex justify-center py-2 mt-2
+                z-100">
                 <Appbar activeLink={"Home"} />
             </div>
             {/* Hero Section */}
@@ -72,12 +74,12 @@ export default function Home() {
                 <Overview />
             </div>
             {/* Statistics */}
-            <div className="w-full h-dvh flex justify-center py-5">
-                <Overview />
+            <div className="w-full flex justify-center py-5">
+                <Stats />
             </div>
             {/* Sponsors */}
             <div className="w-full h-dvh flex justify-center py-5">
-                <Overview />
+                <Sponsors />
             </div>
             {/* Gallery */}
             <div className="w-full h-dvh flex justify-center py-5">
