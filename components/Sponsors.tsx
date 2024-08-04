@@ -6,7 +6,7 @@ export default function Sponsors(){
             {/* Sponsor Marquee Band */}
             <div className='text-[#230C25] bg-white w-full flex
                 gap-x-10 px-2 text-4xl justify-center items-center py-5 
-                border-1 rounded-lg border-[#230C25]'>
+                border-2 rounded-lg border-[#230C25] shadow-2xl'>
                     <AcUnitIcon />
                     <span>Sponsors</span>
                     <AcUnitIcon />
