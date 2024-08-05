@@ -19,14 +19,13 @@ export default function Location(){
                 </div>
             </div>
             <div className="ml-auto flex items-center">
-                <Button
-                    radius="full"
+                <button
                     className="my-2 border-2 bg-white text-[#230C25] 
-                    border-[#230c25] hover:shadow-lg text-4xl p-10
+                    border-[#230c25] hover:shadow-lg text-4xl p-10 rounded-full
                     hover:text-white hover:bg-[#230c25] hover:bg-opacity-100"
                 >
                     Register Now!
-                </Button>
+                </button>
             </div>
         </div>
     );
