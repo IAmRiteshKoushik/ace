@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 export default function Gallery() {
     return (
         <div>
-            <Marquee pauseOnHover speed={70} direction={"right"}>
+            <Marquee pauseOnHover speed={70} direction={"left"}>
                 <div className="flex justify-center">
                     <div className="m-5">
                         <Image
