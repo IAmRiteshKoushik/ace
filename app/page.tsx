@@ -7,6 +7,7 @@ import Overview from "@/components/Overview";
 import Gallery from "@/components/Gallery";
 import Sponsors from "@/components/Sponsors";
 import Stats from "@/components/Stats";
+import Upcoming from "@/components/Upcoming";
 
 const faqs = [
     { 
@@ -56,8 +57,7 @@ export default function Home() {
                 bg-[size:70px_70px]"
             >
             </div>
-            <div className="sticky top-3 w-full flex justify-center py-2 mt-2
-                z-100">
+            <div className="sticky top-3 w-full flex justify-center py-2 mt-2">
                 <Appbar activeLink={"Home"} />
             </div>
             {/* Hero Section */}
@@ -71,7 +71,7 @@ export default function Home() {
             </div>
             {/* Upcoming Events */}
             <div className="w-full h-dvh flex justify-center py-5">
-                <Overview />
+                <Upcoming />
             </div>
             {/* Statistics and Sponsors */}
             <div className="w-full h-dvh flex flex-col justify-center items-center gap-y-10 py-5">
@@ -79,7 +79,7 @@ export default function Home() {
                 <Sponsors />
             </div>
             {/* Gallery */}
-            <div className="w-full h-dvh flex justify-center py-5">
+            <div className="w-full flex justify-center py-5">
                 <Gallery />
             </div>
             {/* FAQ Section */}
