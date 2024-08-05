@@ -1,7 +1,5 @@
 "use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { Chip } from "@nextui-org/react";
-
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 
 type FAQ = {
@@ -60,15 +58,13 @@ export default function FAQSection({ items }: FAQProps){
                     {items.map((item, index) => (
                         <AccordionItem 
                             key={index} 
-
                             title={<div className="text-center flex items-center">
-                                <Chip variant="bordered" 
-                                    size="sm"
-                                    className="border-2 text-[#2E0C25] 
-                                    border-[#2E0C25] text-sm mx-2"
+                                <span
+                                    className="border-2 text-[#2E0C25] rounded-full
+                                    border-[#2E0C25] text-sm mx-2 px-2"
                                 >
                                     {"0" + (index + 1)}
-                                </Chip>
+                                </span>
                                 <span>
                                     {item.question}
                                 </span>
