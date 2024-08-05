@@ -32,7 +32,7 @@ export default function Sponsors(){
     ]
 
     return(
-        <div className='w-3/5 flex flex-col items-center'>
+        <div className='w-3/5 flex flex-col items-center gap-y-5'>
             {/* Sponsor Marquee Band */}
             <div className='text-[#230C25] bg-white w-fit flex
                 gap-x-5 px-5 text-4xl justify-center items-center py-5 
