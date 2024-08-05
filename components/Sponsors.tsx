@@ -6,22 +6,28 @@ export default function Sponsors(){
 
     const sponsorData = [
         {
-            url: "/sponsor_1.png",
+            imgUrl: "/sponsor_1.png",
+            url: "https:/github.com"
         },
         {
-            url: "/sponsor_2.png",
+            imgUrl: "/sponsor_2.png",
+            url: "https:/github.com"
         },
         {
-            url: "/sponsor_3.png",
+            imgUrl: "/sponsor_3.png",
+            url: "https:/github.com"
         },
         {
-            url: "/sponsor_4.png",
+            imgUrl: "/sponsor_4.png",
+            url: "https:/github.com"
         },
         {
-            url: "/sponsor_5.png",
+            imgUrl: "/sponsor_5.png",
+            url: "https:/github.com"
         },
         {
-            url: "/sponsor_6.png",
+            imgUrl: "/sponsor_6.png",
+            url: "https:/github.com"
         }
     ]
 
@@ -57,13 +63,15 @@ export default function Sponsors(){
                 {sponsorData.map((sponsor, index) => (
                     <div key={index} className='border-2 border-[#230C25] p-2
                         rounded-lg flex justify-center items-center 
-                        text-[#230C25] bg-white'>
-                        <Image 
-                            src={sponsor.url}
-                            alt={"Sponsor image"}
-                            width={200}
-                            height={50}
-                        />
+                        text-[#230C25] bg-white hover:shadow-xl'>
+                        <a href={sponsor.url}>
+                            <Image 
+                                src={sponsor.imgUrl}
+                                alt={"Sponsor image"}
+                                width={200}
+                                height={50}
+                            />
+                        </a>
                     </div>
                 ))}
             </div>
