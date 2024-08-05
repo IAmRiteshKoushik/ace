@@ -23,7 +23,7 @@ export default function Stats(){
     ]
     return(
         <div className="bg-[#2E0C25] text-white text-2xl w-full
-            overflow-hidden">
+            overflow-hidden my-20">
             <div className="flex justify-center gap-x-20 items-center">
                 <div>BE A PART OF OUR STATS</div>
                 {data.map((item, index) => (

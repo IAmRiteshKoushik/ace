@@ -57,9 +57,7 @@ export default function Sponsors(){
                             <AcUnitIcon />
                 </div>
             </Marquee>
-            <div className='w-3/5 flex flex-col items-center gap-y-5'>
-                {/* Sponsor Marquee Band */}
-                {/* Call for more sponsorship */}
+            <div className='w-1/2 flex flex-col items-center gap-y-5'>
                 <div className='flex justify-between items-center w-full'>
                     <div>
                         <div className='text-white bg-[#230C25] text-4xl w-fit p-1'>Meet our </div>

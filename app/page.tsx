@@ -80,7 +80,7 @@ export default function Home() {
                 <Upcoming />
             </div>
             {/* Statistics and Sponsors */}
-            <div className="w-full h-dvh flex flex-col justify-center items-center gap-y-10 py-5">
+            <div className="w-full flex flex-col justify-center items-center gap-y-10 py-5">
                 <Stats />
                 <Sponsors />
             </div>

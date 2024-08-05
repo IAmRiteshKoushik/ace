@@ -30,7 +30,7 @@ export default function Upcoming(){
     return(
         <div className="w-3/5">
             {/* Header */}
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-6">
                 <div className="flex flex-col w-fit">
                     <span className="bg-[#230C25] text-md text-white w-fit px-1 mb-1">
                         UPCOMING
