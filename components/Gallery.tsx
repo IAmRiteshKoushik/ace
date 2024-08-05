@@ -1,109 +1,139 @@
-import { Image } from "@nextui-org/react";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 export default function Gallery() {
     return (
-        <div>
+        <div className="relative -z-10">
             <Marquee pauseOnHover speed={70} direction={"left"}>
                 <div className="flex justify-center">
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 1"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-6.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 4"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-2.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 2"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-4.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 4"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 3"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-5.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 4"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
                         />
                     </div>
                 </div>
             </Marquee>
             <Marquee pauseOnHover speed={70} direction={"right"}>
-                <div className="flex justify-center">
+            <div className="flex justify-center">
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-1.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 1"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-6.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 4"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-2.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 2"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-4.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 4"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 3"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
+
+
                         />
                     </div>
                     <div className="m-5">
                         <Image
-                            isZoomed
-                            src="https://nextui-docs-v2.vercel.app/images/fruit-5.jpeg"
+                            src="/sponsor_1.png"
                             alt="Gallery Image 4"
                             className="w-[240px]"
+                            width={200}
+                            height={500}
                         />
                     </div>
                 </div>
