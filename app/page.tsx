@@ -8,6 +8,7 @@ import Gallery from "@/components/Gallery";
 import Sponsors from "@/components/Sponsors";
 import Stats from "@/components/Stats";
 import Upcoming from "@/components/Upcoming";
+import Banner from "@/components/Banner";
 
 const faqs = [
     { 
@@ -57,7 +58,12 @@ export default function Home() {
                 bg-[size:70px_70px]"
             >
             </div>
-            <div className="sticky top-3 w-full flex justify-center py-2 mt-2">
+            <div className="fixed -top-4 w-full flex flex-col items-center justify-center py-2 mt-2">
+                <Banner 
+                    display={true}
+                    content={"Deep dive into the working of startups with founders, angel-investors and venture capitalists."}
+                    boldContent={"Join the cohort of 2023-24. Registrations Closing Soon!"}
+                />
                 <Appbar activeLink={"Home"} />
             </div>
             {/* Hero Section */}
@@ -66,11 +72,11 @@ export default function Home() {
                 <Location />
             </div>
             {/* Overview */}
-            <div className="w-full h-dvh flex justify-center py-5">
+            <div className="w-full flex justify-center py-5">
                 <Overview />
             </div>
             {/* Upcoming Events */}
-            <div className="w-full h-dvh flex justify-center py-5">
+            <div className="w-full flex justify-center py-5">
                 <Upcoming />
             </div>
             {/* Statistics and Sponsors */}
