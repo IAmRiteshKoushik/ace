@@ -1,4 +1,4 @@
-import { Oswald, Philosopher, Charmonman, MonteCarlo,  } from 'next/font/google'
+import { Oswald } from 'next/font/google'
 
 const font = Oswald({
     subsets: ['latin'],
