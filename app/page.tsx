@@ -58,7 +58,7 @@ export default function Home() {
                 bg-[size:70px_70px]"
             >
             </div>
-            <div className="fixed -top-4 w-full flex flex-col items-center justify-center py-2 mt-2">
+            <div className="sticky -top-4 w-full flex flex-col items-center justify-center py-2 mt-2">
                 <Banner 
                     display={true}
                     content={"Deep dive into the working of startups with founders, angel-investors and venture capitalists."}
