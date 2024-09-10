@@ -1,40 +1,36 @@
-# Admin Planning
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
--> NavBar : App-Name, Toggle-Dark, Profile Pic
--> New Button (For creating new event)
+## Getting Started
 
-- Dashboard > Event Cards + Search > Tabs(Attendance + Search, Details, Analytics)
-    : Date | Status | In-Person/Online
-- Draft
-- Newsletter (Mailing List) > Mail + Link + Subscribers
-- New Admin (AdminName, AdminPfp, AdminPass, AdminEmail)
-- Log Out
+First, run the development server:
 
-Event {
-    EventName
-    EventDate
-    EventStartTime
-    EventEndTime
-    EventVenue
-    EventDesc
-    EventBanner
-    EventHosts
-    EventStatus (Upcoming, Ongoing, Past)
-}
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
--- Top Level
-EventCard {
-    EventName
-    EventDate
-    EventLocation
-    Participants
-    Status (Upcoming, Ongoing, Past)
-}
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Attendance System
-=================
-QR -> opens a page which would contain the participant id, participant name 
-auto-filled and disabled in forms input. VolunteerID has to be entered for 
-authorization and them "Submit".
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
