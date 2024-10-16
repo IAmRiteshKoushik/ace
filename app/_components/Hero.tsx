@@ -1,15 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-
 import { HeroHighlight } from "./ui/hero-highlight";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-import { Spotlight } from "./ui/spotlight"; // Import the Spotlight component
 import { Lightbulb, Rocket, Trophy, Laptop } from "lucide-react";
 
 export function Hero() {
   return (
     <HeroHighlight>
-      <Spotlight /> {/* Add the Spotlight component here */}
+
 
       {/* Icons positioned above the text */}
       <div className="relative w-full h-full z-10">
