@@ -31,7 +31,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative h-screen flex items-start mt-20 justify-center w-full group", // Centering items horizontally
+        "relative h-screen w-full flex items-center justify-center group", // Centering items and ensuring full height and width
         containerClassName
       )}
       onMouseMove={handleMouseMove}
@@ -60,7 +60,7 @@ export const HeroHighlight = ({
 
       <motion.div
         initial={{ opacity: 0, translateY: 30 }} // Start hidden and slightly below
-        animate={{ opacity: 1, translateY: 0 }} // Fade in and slide up to position
+        animate={{ opacity: 1, translateY: -20 }} // Move up slightly to lift the content
         transition={{
           duration: 0.8, // Shorter duration for quicker entrance
           ease: "easeInOut",

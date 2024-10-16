@@ -1,37 +1,64 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { Info, Menu, X, CircleUser } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Logo from "../../components/Logo.jpg"
+import Image from 'next/image';
+import { Button } from './ui/button'; // Assuming your ShadCN Button component path
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative">
-      {/* Main navbar content centered */}
+    <nav className="relative w-full">
+      {/* Main navbar content */}
       <motion.div
-        className="sticky mx-auto wrapper top-0 z-50 flex items-center gap-2 py-4 w-3/4"
-        initial={{ opacity: 0, y: 0 }} 
-        animate={{ opacity: 1, y: 0 }} 
+        className="fixed top-0 z-50 w-full flex items-center justify-between py-4 px-6 bg-transparent backdrop-blur-sm" // Reduced blur effect here
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
       >
-        <div className="flex w-full justify-between mx-auto shadow-xl shadow-neutral-900/50 backdrop-blur-md border border-gray-500/30 p-4 rounded-[1.5rem]">
+        {/* Logo on the left */}
+        <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
-            {/* Increased Phoenix SVG size */}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="45" height="45">
-              <g fill="none" strokeWidth="2">
-                <path d="M32,12 C28,14 27,19 32,22 C37,19 36,14 32,12 Z" stroke="black" fill="#FF4500"/>
-                <path d="M32,22 Q28,26 20,30 Q22,20 14,18" stroke="#FF4500" fill="none"/>
-                <path d="M32,22 Q36,26 44,30 Q42,20 50,18" stroke="#FF4500" fill="none"/>
-                <path d="M32,22 Q26,30 30,44 Q32,40 34,44 Q38,30 32,22" stroke="#FF4500" fill="none"/>
-                <path d="M32,12 Q20,30 12,38 Q30,30 32,44 Q34,30 52,38 Q44,30 32,12" stroke="orange" fill="none"/>
-              </g>
-            </svg>
+            <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center border-2 border-orange-300 shadow-lg hover:shadow-2xl transition-transform duration-300 ease-in-out hover:scale-110">
+              <Image
+                src="/Logo.svg"
+                alt="Logo"
+                width={45}
+                height={45}
+                className="object-contain"
+              />
+            </div>
+          </Link>
+          <div className="flex flex-col justify-center h-12 text-center">
+            <span className="text-lg text-gray-200 font-semibold leading-none">AMRITA CENTER FOR</span>
+            <span className="text-lg text-gray-200 font-semibold leading-none">ENTREPRENEURSHIP</span>
+          </div>
+        </div>
+
+        {/* Links in the center */}
+        <div className="mr-20 hidden md:flex flex-grow items-center justify-center space-x-4">
+          {['Home', 'Events', 'Blogs', 'Newsletter', 'Achievements', 'Timeline'].map((item) => (
+            <Link
+              key={item}
+              href={`/${item.toLowerCase()}`}
+              className="text-lg text-gray-300 px-4 py-2 rounded-md transition-transform duration-300 hover:scale-110 font-sans"
+            >
+              {item}
+            </Link>
+          ))}
+        </div>
+
+        {/* Login button on the right */}
+        <div className="flex items-center space-x-4">
+          <Link href="/login">
+            <Button variant="outline" className="mr-2 rounded-lg px-4 py-2 hover:text-orange-500 hover:bg-transparent transition-colors duration-300">
+              Login
+            </Button>
           </Link>
 
-          {/* Hamburger menu button aligned to the right */}
+          {/* Hamburger menu button for mobile view */}
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -40,32 +67,19 @@ const Navbar = () => {
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-
-          {/* Links visible only on larger screens */}
-          <div className="hidden md:flex flex-grow items-center justify-around">
-            {['Home', 'About', 'Contact', 'Events'].map((item) => (
-              <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                className="ml-2 text-lg text-gray-300 px-4 py-2 rounded-md flex-1 text-center 
-                transition-transform duration-300 hover:scale-110 font-sans"
-              >
-                {item}
-              </Link>
-            ))}
-          </div>
         </div>
       </motion.div>
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="relative md:hidden w-[80%] mx-auto">
-          <div className="absolute right-0 bg-gray-900 text-gray-100 w-full space-y-1 px-4 pt-4 pb-3 rounded-md shadow-lg">
-            {['Home', 'About', 'Contact'].map((item) => (
-              <Link key={item} href={`/${item.toLowerCase()}`} className="block text-lg text-gray-300 hover:scale-110 transition-transform duration-300 px-3 py-2 rounded-md flex items-center font-sans">
-                {item === 'Home' && <Menu size={20} className="mr-2" />}
-                {item === 'About' && <Info size={20} className="mr-2" />}
-                {item === 'Contact' && <CircleUser size={20} className="mr-2" />}
+        <div className="fixed inset-0 z-40 bg-gray-900 bg-opacity-90 flex flex-col items-center justify-center space-y-6 md:hidden">
+          <div className="w-[80%] mx-auto space-y-4">
+            {['Home', 'Events', 'Blogs', 'Newsletter', 'Achievements', 'Timeline'].map((item) => (
+              <Link
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                className="block text-xl text-gray-300 hover:scale-110 transition-transform duration-300 px-3 py-2 rounded-md text-center font-sans"
+              >
                 {item}
               </Link>
             ))}

@@ -6,6 +6,7 @@ import { Lightbulb, Rocket, Trophy, Laptop } from "lucide-react";
 
 export function Hero() {
   return (
+    
     <HeroHighlight>
 
 
@@ -43,7 +44,7 @@ export function Hero() {
           ease: [0.4, 0.0, 0.2, 1],
         }}
         className="px-10 py-12 text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-snug lg:leading-tight text-center mx-auto 
-                   drop-shadow-lg"
+                   drop-shadow-lg "
       >
         <div className="flex flex-col items-center justify-center space-y-6">
           <span className="tracking-tight text-2xl md:text-4xl text-center font-medium text-white">
@@ -52,7 +53,7 @@ export function Hero() {
 
           <h1 className="tracking-tight text-8xl md:text-7xl xl:text-8xl text-center font-bold my-2">
             <span className="font-extrabold bg-gradient-to-b from-orange-500 via-orange-600 to-black bg-clip-text text-transparent">
-              100x <span className="text-white font-bold"> Startups </span>
+              100x <span className="text-white font-bold"> Startups!</span>
             </span>
           </h1>
 
@@ -65,7 +66,7 @@ export function Hero() {
             as="button"
             className="dark:bg-transparent dark:text-white flex items-center space-x-2 px-4"
           >
-            <span className="text-lg">JOIN US</span>
+            <span className="text-lg">Register at Amrita Centre for Entrepreneurship 🚀</span>
           </HoverBorderGradient>
         </div>
       </motion.h1>
