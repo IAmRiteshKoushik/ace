@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Info, Menu, X, CircleUser } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Logo from "../../components/Logo.jpg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
     <nav className="relative">
       {/* Main navbar content centered */}
       <motion.div
-        className="sticky mx-auto wrapper top-0 z-50 flex items-center gap-2 py-6 w-2/3"
+        className="sticky mx-auto wrapper top-0 z-50 flex items-center gap-2 py-4 w-3/4"
         initial={{ opacity: 0, y: 0 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 1.2 }}
