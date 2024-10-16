@@ -2,8 +2,7 @@ import Image from "next/image";
 import Navbar from "./_components/Navbar";
 import FAQ from "./_components/FAQ"
 import { Hero } from "./_components/Hero";
-import { Spotlight } from "@/components/ui/spotlight";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { Spotlight } from "@/app/_components/ui/spotlight";
 
 export default function Home() {
   return (
