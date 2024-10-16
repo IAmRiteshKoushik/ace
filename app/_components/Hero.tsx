@@ -3,12 +3,34 @@ import { motion } from "framer-motion";
 
 import { HeroHighlight } from "./ui/hero-highlight";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-
+import { Spotlight } from "./ui/spotlight"; // Import the Spotlight component
 import { Lightbulb, Rocket, Trophy, Laptop } from "lucide-react";
 
 export function Hero() {
   return (
     <HeroHighlight>
+      <Spotlight /> {/* Add the Spotlight component here */}
+
+      {/* Icons positioned above the text */}
+      <div className="relative w-full h-full z-10">
+        <motion.div
+          className="absolute top-[-40px] left-10"
+          animate={{ y: [0, -10, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+        >
+          <Lightbulb className="w-10 h-10 text-blue-400" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-[-40px] right-10"
+          animate={{ y: [0, -15, 15, 0] }}
+          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+        >
+          <Rocket className="w-10 h-10 text-orange-500" />
+        </motion.div>
+      </div>
+
+      {/* Main text section */}
       <motion.h1
         initial={{
           opacity: 0,
@@ -26,17 +48,15 @@ export function Hero() {
                    drop-shadow-lg"
       >
         <div className="flex flex-col items-center justify-center space-y-6">
-          
           <span className="tracking-tight text-2xl md:text-4xl text-center font-medium text-white">
             Welcome to
           </span>
 
           <h1 className="tracking-tight text-8xl md:text-7xl xl:text-8xl text-center font-bold my-2">
-  <span className="font-extrabold bg-gradient-to-b from-orange-500 via-orange-600 to-black bg-clip-text text-transparent">
-    100x Startups
-  </span>
-</h1>
-
+            <span className="font-extrabold bg-gradient-to-b from-orange-500 via-orange-600 to-black bg-clip-text text-transparent">
+              100x <span className="text-white font-bold"> Startups </span>
+            </span>
+          </h1>
 
           <p className="text-white max-w-lg text-center tracking-tight md:text-lg font-light leading-relaxed">
             Empowering innovators, crafting leaders, and building startups at Warp Speed
@@ -49,30 +69,13 @@ export function Hero() {
           >
             <span className="text-lg">JOIN US</span>
           </HoverBorderGradient>
-         
         </div>
       </motion.h1>
 
-      {/* Floating Icons */}
-      <div className="relative w-full h-full">
+      {/* Icons positioned below the text */}
+      <div className="relative w-full h-full z-10">
         <motion.div
-          className="absolute top-5 left-10"
-          animate={{ y: [0, -10, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        >
-          <Lightbulb className="w-10 h-10 text-blue-400" />
-        </motion.div>
-
-        <motion.div
-          className="absolute top-10 right-10"
-          animate={{ y: [0, -15, 15, 0] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-        >
-          <Rocket className="w-10 h-10 text-orange-500" />
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-32 left-20"
+          className="absolute bottom-[-40px] left-20"
           animate={{ y: [0, -20, 20, 0] }}
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
         >
@@ -80,7 +83,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-20 right-20"
+          className="absolute bottom-[-40px] right-20"
           animate={{ y: [0, -12, 12, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         >

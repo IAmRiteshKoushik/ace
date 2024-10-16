@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/_components/lib/utils";
+import { cn } from "@/lib/utils";
 
 type SpotlightProps = {
   className?: string;
@@ -15,7 +15,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
       )}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3787 2842"
-      fill=""
+      fill="none"
     >
       <g filter="url(#filter)">
         <ellipse
@@ -24,7 +24,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           rx="1924.71"
           ry="273.501"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
-          fill={fill || "orange"} // Set the default fill color to orange
+          fill={fill || "white"}
           fillOpacity="0.21"
         ></ellipse>
       </g>
