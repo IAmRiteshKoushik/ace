@@ -1,11 +1,6 @@
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./_components/Navbar";
-import { Hero } from "./_components/Hero";
-import { Spotlight } from "@/components/ui/spotlight";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -32,14 +27,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-  
-        <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="orange"
-      />
-        <Navbar />
-        <Hero />
-     
+
+
         {children}
       </body>
     </html>
