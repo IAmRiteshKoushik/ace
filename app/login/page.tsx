@@ -1,15 +1,15 @@
 import Link from "next/link"
 
-import { Button } from "@/app/_components/ui/button"
+import { Button } from "@/_components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/app/_components/ui/card"
-import { Input } from "@/app/_components/ui/input"
-import { Label } from "@/app/_components/ui/label"
+} from "@/_components/ui/card"
+import { Input } from "@/_components/ui/input"
+import { Label } from "@/_components/ui/label"
 
 // TODO: Add the checkbox background and dark theme as login 
 // background
