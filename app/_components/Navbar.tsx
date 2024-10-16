@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Info, Menu, X, CircleUser } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Logo from "../../components/Logo.jpg"
+import Logo from "@/public/Logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +14,8 @@ const Navbar = () => {
       {/* Main navbar content centered */}
       <motion.div
         className="sticky mx-auto wrapper top-0 z-50 flex items-center gap-2 py-4 w-3/4"
-        initial={{ opacity: 0, y: 0 }} 
-        animate={{ opacity: 1, y: 0 }} 
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
       >
         <div className="flex w-full justify-between mx-auto shadow-lg shadow-neutral-600/10 backdrop-blur-lg border border-gray-800/10 p-4 rounded-2xl"> {/* Changed border color */}
