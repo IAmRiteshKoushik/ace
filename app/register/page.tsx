@@ -16,7 +16,7 @@
 import React from "react";
 import { Label } from "../_components/ui/label";
 import { Input } from "../_components/ui/input";
-import { cn } from "@/lib/utils";
+import { cn } from "@/_components/lib/utils";
 
 export default function SignupForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
