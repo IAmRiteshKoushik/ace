@@ -36,10 +36,11 @@ export default function RootLayout({
         <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="orange"
-      />
-        <Navbar />
-        <Hero />
-     
+      /><div className="flex flex-col justify-center">
+      <Navbar />
+      <Hero />
+    </div>
+    
         {children}
       </body>
     </html>

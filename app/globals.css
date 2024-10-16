@@ -1,11 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffbf00;
-  --foreground: #1e1e1e;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,7 +13,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, 'Poppins',sans-serif;
 }
 
 @layer utilities {
@@ -25,3 +21,5 @@ body {
     text-wrap: balance;
   }
 }
+
+  
