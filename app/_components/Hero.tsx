@@ -1,9 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+
+import { HeroHighlight } from "./ui/hero-highlight";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
+
 import { Lightbulb, Rocket, Trophy, Laptop } from "lucide-react";
-import { Cover } from "@/components/ui/cover";
 
 export function Hero() {
   return (
