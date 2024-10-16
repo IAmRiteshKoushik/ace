@@ -1,10 +1,9 @@
 'use client';
-import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Info, Menu, X, CircleUser } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Logo from "../../public/Logo.jpg";
+import Logo from "../../components/Logo.jpg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,23 +13,23 @@ const Navbar = () => {
       {/* Main navbar content centered */}
       <motion.div
         className="sticky mx-auto wrapper top-0 z-50 flex items-center gap-2 py-4 w-3/4"
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 0 }} 
+        animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 1.2 }}
       >
-        <div className="flex w-full justify-between mx-auto shadow-lg shadow-neutral-600/10 backdrop-blur-lg border border-gray-800/10 p-4 rounded-2xl"> {/* Changed border color */}
-          {/* Logo Section */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <Image
-                src={Logo}
-                alt="Logo"
-                width={50} // Adjust width as needed
-                height={50} // Adjust height as needed
-                className="object-contain" // Ensures the image scales properly
-              />
-            </Link>
-          </div>
+        <div className="flex w-full justify-between mx-auto shadow-xl shadow-neutral-900/50 backdrop-blur-md border border-gray-500/30 p-4 rounded-[1.5rem]">
+          <Link href="/" className="flex items-center space-x-2">
+            {/* Increased Phoenix SVG size */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="45" height="45">
+              <g fill="none" strokeWidth="2">
+                <path d="M32,12 C28,14 27,19 32,22 C37,19 36,14 32,12 Z" stroke="black" fill="#FF4500"/>
+                <path d="M32,22 Q28,26 20,30 Q22,20 14,18" stroke="#FF4500" fill="none"/>
+                <path d="M32,22 Q36,26 44,30 Q42,20 50,18" stroke="#FF4500" fill="none"/>
+                <path d="M32,22 Q26,30 30,44 Q32,40 34,44 Q38,30 32,22" stroke="#FF4500" fill="none"/>
+                <path d="M32,12 Q20,30 12,38 Q30,30 32,44 Q34,30 52,38 Q44,30 32,12" stroke="orange" fill="none"/>
+              </g>
+            </svg>
+          </Link>
 
           {/* Hamburger menu button aligned to the right */}
           <div className="flex items-center md:hidden">
@@ -44,32 +43,16 @@ const Navbar = () => {
 
           {/* Links visible only on larger screens */}
           <div className="hidden md:flex flex-grow items-center justify-around">
-            <Link
-              href="/"
-              className="ml-2 font-mono text-xl text-gray-400 hover:text-gray-100 px-4 py-2 rounded-md flex-1 text-center 
-              border border-transparent hover:border-gray-500 hover:rounded-full hover:bg-gray-700 hover:bg-opacity-5 
-              transition-all duration-300"
-            >
-              Home
-            </Link>
-
-            <Link
-              href="/about"
-              className="ml-2 font-mono text-xl text-gray-400 hover:text-gray-100 px-4 py-2 rounded-md flex-1 text-center 
-              border border-transparent hover:border-gray-500 hover:rounded-full hover:bg-gray-700 hover:bg-opacity-5 
-              transition-all duration-300"
-            >
-              About
-            </Link>
-
-            <Link
-              href="/contact"
-              className="ml-2 font-mono text-xl text-gray-400 hover:text-gray-100 px-4 py-2 rounded-md flex-1 text-center 
-              border border-transparent hover:border-gray-500 hover:rounded-full hover:bg-gray-700 hover:bg-opacity-5 
-              transition-all duration-300"
-            >
-              Contact
-            </Link>
+            {['Home', 'About', 'Contact', 'Events'].map((item) => (
+              <Link
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                className="ml-2 text-lg text-gray-300 px-4 py-2 rounded-md flex-1 text-center 
+                transition-transform duration-300 hover:scale-110 font-sans"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
       </motion.div>
@@ -77,19 +60,15 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="relative md:hidden w-[80%] mx-auto">
-          <div className="absolute right-0 bg-gray-800 text-gray-100 w-full space-y-1 px-4 pt-4 pb-3 rounded-md shadow-lg">
-            <Link href="/" className="block font-mono hover:bg-gray-700 px-3 py-2 rounded-md flex items-center">
-              <Menu size={20} className="mr-2" />
-              Home
-            </Link>
-            <Link href="/about" className="block font-mono hover:bg-gray-700 px-3 py-2 rounded-md flex items-center">
-              <Info size={20} className="mr-2" />
-              About
-            </Link>
-            <Link href="/contact" className="block font-mono hover:bg-gray-700 px-3 py-2 rounded-md flex items-center">
-              <CircleUser size={20} className="mr-2" />
-              Contact
-            </Link>
+          <div className="absolute right-0 bg-gray-900 text-gray-100 w-full space-y-1 px-4 pt-4 pb-3 rounded-md shadow-lg">
+            {['Home', 'About', 'Contact'].map((item) => (
+              <Link key={item} href={`/${item.toLowerCase()}`} className="block text-lg text-gray-300 hover:scale-110 transition-transform duration-300 px-3 py-2 rounded-md flex items-center font-sans">
+                {item === 'Home' && <Menu size={20} className="mr-2" />}
+                {item === 'About' && <Info size={20} className="mr-2" />}
+                {item === 'Contact' && <CircleUser size={20} className="mr-2" />}
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
       )}
