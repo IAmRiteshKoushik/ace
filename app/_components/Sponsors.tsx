@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import google from "@/public/sponsers/google.svg";
-import cocacola from "@/public/sponsers/coca-cola.svg";
-import instagram from "@/public/sponsers/instagram.svg";
-import microsoft from "@/public/sponsers/microsoft.svg";
-import tinder from "@/public/sponsers/tinder.svg";
-import facebook from "@/public/sponsers/facebook.svg";
-import netflix from "@/public/sponsers/netflix.svg";
-import tesla from "@/public/sponsers/tesla.svg";
+import google from "../../public/sponsers/google.svg";
+import cocacola from "../../public/sponsers/coca-cola.svg";
+import instagram from "../../public/sponsers/instagram.svg";
+import microsoft from "../../public/sponsers/microsoft.svg";
+import tinder from "../../public/sponsers/tinder.svg";
+import facebook from "../../public/sponsers/facebook.svg";
+import netflix from "../../public/sponsers/netflix.svg";
+import tesla from "../../public/sponsers/tesla.svg";
 
 const sponsorsData = [
   { name: "Google", logo: google, url: "https://www.companya.com" },
@@ -25,13 +25,14 @@ const sponsorsData = [
 
 const Sponsors = () => {
   return (
-    <div className="flex flex-col py-8 items-center justify-center bg-black text-white">
-      <h1
-        className="text-5xl mb-4"
-        style={{ fontFamily: "var(--font-geist-sans)" }}
-      >
-        Our Sponsors
-      </h1>
+    <div className="flex flex-col py-8 items-center justify-center">
+      <div>
+        <h1
+          className="font-bold text-5xl bg-orange-500 w-fit px-4 py-1 text-center text-black"
+        >
+          Our Sponsors
+        </h1>
+      </div>
       <div className="flex space-x-4 w-[80vw] text-xl">
         {sponsorsData.map((sponsor, index) => (
           <motion.div
