@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Info, Menu, X, CircleUser } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Logo from "@/public/Logo.jpg";
+import Logo from "../../public/Logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

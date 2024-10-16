@@ -2,7 +2,7 @@ import Image from "next/image";
 import Navbar from "./_components/Navbar";
 import FAQ from "./_components/FAQ"
 import { Hero } from "./_components/Hero";
-import { Spotlight } from "@/app/_components/ui/spotlight";
+import { Spotlight } from "@/_components/ui/spotlight";
 
 export default function Home() {
   return (
