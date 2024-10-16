@@ -6,15 +6,13 @@
   "tailwind": {
     "config": "tailwind.config.ts",
     "css": "app/globals.css",
-    "baseColor": "neutral",
+    "baseColor": "slate",
     "cssVariables": true,
     "prefix": ""
   },
   "aliases": {
     "components": "@/app/_components",
     "utils": "@/lib/utils",
-    "ui": "@/app/_components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
+    "ui": "@/app/_components/ui"
   }
 }
