@@ -57,15 +57,14 @@ export function Hero() {
             </h1>
 
             <p className="text-white max-w-lg text-center tracking-tight md:text-lg font-light leading-relaxed">
-              Empowering innovators, crafting leaders, and building startups at Warp Speed
+              Empowering innovators, crafting leaders, and building startups for the social good. Winter batch is accepting applicants!
             </p>
-
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
               className="dark:bg-transparent dark:text-white flex items-center space-x-2 px-4"
             >
-              <span className="text-lg">Register at Amrita Centre for Entrepreneurship 🚀</span>
+              <span className="text-lg">Register @ Amrita Centre for Entrepreneurship Today!</span>
             </HoverBorderGradient>
           </div>
         </motion.h1>
@@ -91,4 +90,5 @@ export function Hero() {
       </div>
     </HeroHighlight>
   )
+
 }
