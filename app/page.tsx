@@ -6,6 +6,7 @@ import { Spotlight } from "@/_components/ui/spotlight";
 import { Footer } from "./_components/Footer";
 
 import Sponsors from "./_components/Sponsors";
+import Statistics from "./_components/StatCard";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
+      <Statistics />
       <Sponsors />
       <FAQ />
       <Footer />
