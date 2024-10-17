@@ -114,6 +114,15 @@ const config: Config = {
   				},
   				'100%': {
   					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
   				}
   			}
   		},
@@ -123,6 +132,7 @@ const config: Config = {
   			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
   			spotlight: 'spotlight 2s ease .75s 1 forwards',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
+  			shine: 'shine var(--duration) infinite linear'
   		}
   	}
   },

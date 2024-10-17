@@ -88,6 +88,7 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-    </HeroHighlight >
-  );
+    </HeroHighlight>
+  )
+
 }
