@@ -79,9 +79,6 @@ export function Hero() {
           >
             <Trophy className="w-10 h-10 text-green-400" />
           </motion.div>
-          <p className="text-white max-w-lg text-center tracking-tight md:text-lg font-light leading-relaxed">
-            Empowering innovators, crafting leaders, and building startups for the social good. Winter batch is accepting applicants!
-          </p>
 
           <motion.div
             className="absolute bottom-[-40px] right-20"
@@ -90,10 +87,8 @@ export function Hero() {
           >
             <Laptop className="w-10 h-10 text-purple-400" />
           </motion.div>
-            <span className="text-lg">Register @ Amrita Centre for Entrepreneurship Today!</span>
-          </HoverBorderGradient>
         </div>
       </div>
     </HeroHighlight>
-  );
+  )
 }
