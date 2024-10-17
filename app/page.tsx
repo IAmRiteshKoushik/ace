@@ -42,7 +42,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Statistics />
-      <div className="flex">
+      {/* TODO: Move this section to Offerings.tsx (Clean up task) */}
+      <div className="w-full flex justify-center items-center mt-10">
+        <span className="text-6xl font-extrabold bg-gradient-to-b from-orange-500 via-orange-600 to-black bg-clip-text text-transparent">
+          Empowering <span className="text-white font-bold">Students Through</span>
+        </span>
+      </div>
+      <div className="flex items-center justify-center gap-x-5 mt-10 mb-5">
         {
           offerData.map((offer, index) => (
             <div key={index}>
