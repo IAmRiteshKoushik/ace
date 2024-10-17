@@ -25,15 +25,15 @@ const Navbar = () => {
               <Image
                 src="/Logo.svg"
                 alt="Logo"
-                width={45}
-                height={45}
+                width={70}
+                height={70}
                 className="object-contain"
               />
             </div>
           </Link>
           <div className="flex flex-col justify-center h-12 text-center">
-            <span className="text-lg text-gray-200 font-semibold leading-none">AMRITA CENTER FOR</span>
-            <span className="text-lg text-gray-200 font-semibold leading-none">ENTREPRENEURSHIP</span>
+            <span className="text-lg text-gray-300 font-semibold leading-none">Amrita Center For</span>
+            <span className="text-lg text-gray-300 font-semibold leading-none">Entrepreneurship</span>
           </div>
         </div>
 
