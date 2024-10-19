@@ -4,78 +4,142 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { LampContainer } from "@/_components/ui/lamp";
+import OrbitingCircles from "@/_components/ui/orbiting-circles";
 import google from "../../public/sponsers/google.svg";
-import cocacola from "../../public/sponsers/coca-cola.svg";
+import bitcoin from "../../public/sponsers/bitcoin.svg";
 import instagram from "../../public/sponsers/instagram.svg";
 import microsoft from "../../public/sponsers/microsoft.svg";
-import tinder from "../../public/sponsers/tinder.svg";
+import oracle from "../../public/sponsers/oracle.svg";
 import facebook from "../../public/sponsers/facebook.svg";
 import netflix from "../../public/sponsers/netflix.svg";
 import tesla from "../../public/sponsers/tesla.svg";
 
-const sponsorsData = [
-  { name: "Google", logo: google, url: "https://www.companya.com" },
-  { name: "Coco Cola", logo: cocacola, url: "https://www.companyb.com" },
-  { name: "Instagram", logo: instagram, url: "https://www.companyc.com" },
-  { name: "Netflix", logo: netflix, url: "https://www.netflix.com" },
-  { name: "Microsoft", logo: microsoft, url: "https://www.microsoft.com" },
-  { name: "Tinder", logo: tinder, url: "https://www.amazon.com" },
-  { name: "Facebook", logo: facebook, url: "https://www.facebook.com" },
-  { name: "Tesla", logo: tesla, url: "https://www.tesla.com" },
-];
-
 const Sponsors = () => {
   return (
-    <div className="flex flex-col py-8 items-center justify-center">
-      <div>
-        <LampContainer>
-          <motion.h1
-            initial={{ opacity: 0.5, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="mt-2 bg-gradient-to-br py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-          >
-            <p
-              className="font-bold text-5xl px-4 py-1 text-center"
-            >
-              <span className="font-extrabold bg-gradient-to-b from-orange-500 via-orange-600 to-black bg-clip-text text-transparent">
-                Our partners <span className="text-white font-bold">in this Journey!</span></span>
-            </p>
+    <div className="relative flex h-[900px] w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
+      <span className="z-10 shadow-md pointer-events-none whitespace-pre-wrap text-orange-500 bg-clip-text text-center text-5xl font-semibold leading-none font-">
+        Our Sponsors
+      </span>
 
-            {/* Orbit comes here I guess */}
-            <div className="flex space-x-4 w-[80vw] text-xl">
-              {sponsorsData.map((sponsor, index) => (
-                <motion.div
-                  key={index}
-                  className="flex flex-col items-center rounded-lg p-6 shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
-                    <motion.div
-                      className="mb-2"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Image
-                        src={sponsor.logo}
-                        alt={`${sponsor.name} Logo`}
-                        width={128}
-                        height={64}
-                        className="w-32 h-auto"
-                      />
-                    </motion.div>
-                  </a>
-                </motion.div>
-              ))}
-            </div>
-          </motion.h1>
-        </LampContainer>
-      </div>
+      {/* Inner Circles */}
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={0}
+        radius={180}
+      >
+        <Image
+          src={bitcoin}
+          alt="Bitcoin"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={13}
+        radius={180}
+      >
+        <Image
+          src={google}
+          alt="Google"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={23}
+        radius={180}
+      >
+        <Image
+          src={instagram}
+          alt="Instagram"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={33}
+        radius={180}
+      >
+        <Image
+          src={netflix}
+          alt="Netflix"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
+
+      {/* Outer Circles */}
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={7}
+        radius={280}
+        reverse
+      >
+        <Image
+          src={microsoft}
+          alt="Microsoft"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={17}
+        radius={280}
+        reverse
+      >
+        <Image
+          src={oracle}
+          alt="Oracle"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={24}
+        radius={280}
+        reverse
+      >
+        <Image
+          src={facebook}
+          alt="Facebook"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
+      <OrbitingCircles
+        className="border-none bg-transparent"
+        duration={40}
+        delay={38}
+        radius={280}
+        reverse
+      >
+        <Image
+          src={tesla}
+          alt="Tesla"
+          className="w-[64px] h-[64px] object-contain"
+          height={128}
+          width={128}
+        />
+      </OrbitingCircles>
     </div>
   );
 };
